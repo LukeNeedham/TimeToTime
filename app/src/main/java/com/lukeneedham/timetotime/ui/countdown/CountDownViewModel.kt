@@ -48,6 +48,10 @@ class CountDownViewModel : ViewModel() {
         _showPinchHint.value = false
     }
 
+    fun restart() {
+        startCountdown(DEFAULT_TIMER)
+    }
+
     private fun startCountdown(millis: Long) {
         timer?.cancel()
 
@@ -68,6 +72,6 @@ class CountDownViewModel : ViewModel() {
         private const val MILLIS_IN_SECOND = 1000L
         private const val ADJUST_BY_SECONDS = 10
         private const val ADJUST_BY_MILLIS = ADJUST_BY_SECONDS * MILLIS_IN_SECOND
-        private const val DEFAULT_TIMER = 50 * MILLIS_IN_SECOND
+        private const val DEFAULT_TIMER = 30 * MILLIS_IN_SECOND
     }
 }
