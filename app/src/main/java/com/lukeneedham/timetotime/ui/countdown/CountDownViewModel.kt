@@ -23,6 +23,9 @@ class CountDownViewModel : ViewModel() {
     private val _minusEnabled = MutableLiveData<Boolean>()
     val minusEnabled: LiveData<Boolean> = _minusEnabled
 
+    private val _showPinchHint = MutableLiveData<Boolean>()
+    val showPinchHint: LiveData<Boolean> = _showPinchHint
+
     val adjustBySeconds = ADJUST_BY_SECONDS
 
     init {
@@ -39,6 +42,10 @@ class CountDownViewModel : ViewModel() {
         val oldMillis = millisRemainingValue ?: 0
         val newMillis = oldMillis - ADJUST_BY_MILLIS
         startCountdown(newMillis)
+    }
+
+    fun onClockPinch() {
+        _showPinchHint.value = false
     }
 
     private fun startCountdown(millis: Long) {
@@ -61,6 +68,6 @@ class CountDownViewModel : ViewModel() {
         private const val MILLIS_IN_SECOND = 1000L
         private const val ADJUST_BY_SECONDS = 10
         private const val ADJUST_BY_MILLIS = ADJUST_BY_SECONDS * MILLIS_IN_SECOND
-        private const val DEFAULT_TIMER = 100 * MILLIS_IN_SECOND
+        private const val DEFAULT_TIMER = 50 * MILLIS_IN_SECOND
     }
 }

@@ -23,3 +23,4 @@ val purple700 = Color(0xFF3700B3)
 val teal200 = Color(0xFF03DAC5)
 
 val buttonBackground = Color(0xFF777777)
+val mutedText = Color(0xFF999999)
