@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.lukeneedham.timetotime.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
