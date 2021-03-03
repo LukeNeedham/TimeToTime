@@ -13,7 +13,7 @@ different features of Compose - and I certainly know a lot more about it now!
 I've used a mixture of Compose animation APIs,
 investigated percentage-based sizing,
 injected a ViewModel into a Composable,
-and even added gesture support for pinch-to=zoom.
+and even added gesture support for pinch-to-zoom.
 
 Try pinching the clock to see what happens...
 
